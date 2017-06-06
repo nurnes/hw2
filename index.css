@@ -10,7 +10,7 @@ span.wow {
 span {
     display: block;
     float: top;
-    width: 7rem;
+    width: 12.9rem;
     border-style: solid;
     border-width: 3px;
     padding: 3px;
@@ -24,7 +24,7 @@ li {
 }
 
 button {
-    width: 4rem;
+    width: 6.8rem;
 }
 
 .center {
@@ -33,4 +33,5 @@ button {
 
 body {
     background-color: #dbe6a4;
+    background-image: url("bg.png");
 }
