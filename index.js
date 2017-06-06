@@ -3,7 +3,7 @@ const myForm = document.querySelector('form#myForm')
 function addDino(ev){
     ev.preventDefault()
     const form = ev.target
-    const ul = document.querySelector('ul')
+    const ol = document.querySelector('ol')
     const dino = document.createElement('li')
     const text = document.createElement('span')
     const fav = document.createElement('button')
@@ -16,7 +16,7 @@ function addDino(ev){
     dino.appendChild(text)
     dino.appendChild(fav)
     dino.appendChild(del)
-    document.querySelector('ul').insertBefore(dino, ul.childNodes[2])
+    document.querySelector('ol').insertBefore(dino, ol.childNodes[2])
     
 }
 
@@ -26,7 +26,8 @@ function favorite(ev){
 }
 
 function delist(ev){
-    ev.target.parentElement.parentElement.removeChild(ev.target.parentElement.parentElement.childNodes[0])
+    ev.target.parentElement.outerHTML = ""
+    //ev.target.parentElement.removeChild(ev.target.parentElement.childNodes[0])
 }
 
 

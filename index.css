@@ -3,6 +3,12 @@ span.wow {
     border-width: 4px;
 }
 
-.inline {
-    float: left;
+span {
+    display: block;
+    float: top;
+    
+    width: 200px;
+}
+button {
+    padding: 20px;
 }
