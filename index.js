@@ -17,7 +17,6 @@ function addDino(ev){
     dino.appendChild(fav)
     dino.appendChild(del)
     document.querySelector('ol').insertBefore(dino, ol.childNodes[2])
-    
 }
 
 function favorite(ev){
