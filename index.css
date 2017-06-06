@@ -1,14 +1,27 @@
 span.wow {
-    border-style: groove;
-    border-width: 4px;
+    border-style: dotted;
+    border-width: 3px;
+    
 }
 
 span {
+    border-style: groove;
+    border-width: 3px;
+    padding: 3px;
+}
+span {
     display: block;
     float: top;
-    
-    width: 200px;
+    width: 7rem;
 }
+li {
+    padding: 5px;
+}
+
 button {
-    padding: 20px;
+    width: 4rem;
+}
+
+.center {
+    width: 960px; margin: auto;
 }

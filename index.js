@@ -22,7 +22,11 @@ function addDino(ev){
 
 function favorite(ev){
     const dino = ev.target.parentElement.childNodes
-    dino[0].setAttribute("class", "wow")
+    if(dino[0].hasAttribute("class")){
+        dino[0].removeAttribute("class")
+    }else{
+        dino[0].setAttribute("class", "wow")
+    }
 }
 
 function delist(ev){
