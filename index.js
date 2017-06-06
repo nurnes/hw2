@@ -5,24 +5,28 @@ function addDino(ev){
     const form = ev.target
     const ul = document.querySelector('ul')
     const dino = document.createElement('li')
-    const dinoDiv = document.createElement('div')
     const text = document.createElement('span')
     const fav = document.createElement('button')
+    const del = document.createElement('button')
     fav.addEventListener("click", favorite);
-    //fav.setAttribute("class", "inline")
     fav.textContent = "fav"
+    del.addEventListener("click", delist)
+    del.textContent = "del"
     text.textContent = form.dinoIn.value
-    dino.appendChild(dinoDiv)
-    dinoDiv.appendChild(text)
-    dinoDiv.appendChild(fav)
-    //document.querySelector('ul').appendChild(dino)
-    document.querySelector('ul').insertBefore(dino, ul.childNodes[0])
+    dino.appendChild(text)
+    dino.appendChild(fav)
+    dino.appendChild(del)
+    document.querySelector('ul').insertBefore(dino, ul.childNodes[2])
     
 }
 
 function favorite(ev){
-    const dinoDiv = ev.target.parentElement.childNodes
-    dinoDiv[0].setAttribute("class", "wow")
+    const dino = ev.target.parentElement.childNodes
+    dino[0].setAttribute("class", "wow")
+}
+
+function delist(ev){
+    ev.target.parentElement.parentElement.removeChild(ev.target.parentElement.parentElement.childNodes[0])
 }
 
 
